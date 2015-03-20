@@ -1,1 +1,1 @@
-Dit is de map waar de web applicatie in komt te staan.
+Dit is de map waar de web applicatie in komt te staan. Test.
