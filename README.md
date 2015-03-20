@@ -1,11 +1,11 @@
-# AD_IT01
+﻿# AD_IT01
 AppDev repo voor AD_IT01
 
 GROEPSLEDEN:
 
 Kevin Coenegrachts 
 Ruben Cox 
-Remco Vangestel 
+Remco Van Gestel 
 Sören Veestraeten
 
 BESCHRIJVING SUBPROJECTEN: 
