@@ -10,7 +10,6 @@
 			'message' => "no action provided"
 			);
 		echo json_encode($data);
-		break;
 	}
 	else if(!isset($_GET['apikey']))
 	{
@@ -19,7 +18,6 @@
 			'message' => "no apikey provided"
 			);
 		echo json_encode($data);
-		break;
 	}
 
 	/* Action and Apikey is set */
