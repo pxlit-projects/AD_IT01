@@ -11,6 +11,9 @@ Sören Veestraeten
 BESCHRIJVING SUBPROJECTEN: 
 
 Finah-Backend:
+php
+sql
+Sublime Text
 
 
 Finah-desktop:
