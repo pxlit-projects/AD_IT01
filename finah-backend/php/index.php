@@ -101,8 +101,6 @@
 									"password" => $password
 									]]);
 
-								var_dump($dblogin);
-
 								/* Incorrect username and / or password */
 								if($dblogin == 0)
 								{
