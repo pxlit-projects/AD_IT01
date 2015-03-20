@@ -76,8 +76,9 @@
 				switch ($action) {
 					case 'login':
 
+							$jsondata = json_decode(file_get_contents('php://input'), true);
 							/* Check if username and password is set */
-							if(!isset($_POST['username']) || !isset($_POST['password']))
+							if(!isset($jsondata['username']) || !isset($jsondata['password']))
 							{
 								$data = array(
 									'success' => "false",
@@ -90,14 +91,17 @@
 							/* Username and password is set */
 							else
 							{
-								$username = $_POST['username'];
-								$password = $_POST['password'];
+								$username = $jsondata['username'];
+								$password = $jsondata['password'];
 
 								/* Check for correct username and password */
 								$dblogin = $database->count("users", [
-									"username" => "username",
-									"password" => "password"
-									]);
+									"AND" => [
+									"username" => $username,
+									"password" => $password
+									]]);
+
+								var_dump($dblogin);
 
 								/* Incorrect username and / or password */
 								if($dblogin == 0)
