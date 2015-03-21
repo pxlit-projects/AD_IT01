@@ -1,4 +1,4 @@
-// begin eigen bootstrap (om met vijf kolommen te kunnen werken)
+/*begin eigen bootstrap (om met vijf kolommen te kunnen werken)*/
 
 .col-xs-15,
 .col-sm-15,
@@ -32,5 +32,41 @@
         float: left;
     }
 }
+/*einde eigen bootstrap*/
 
-// einde eigen bootstrap
+.container{
+	background-color: #cbe4fd;
+}
+/* Head van de pagina*/
+#headRow{
+	background-color: #99cafb;
+}
+#headTitle{
+	font-size: 62px;
+	text-align: center;
+	margin-top:3%;
+}
+
+/* Video intro pagina*/
+#videoIntro{
+	visibility: hidden;
+	display: none;
+}
+#startEnquete{
+	visibility: hidden;
+}
+#patient{
+	border: #99cafb solid 2px;
+}
+#info{
+	font-size: 20px;
+}
+
+#filler{
+	height: 500px;;
+}
+
+
+
+
+

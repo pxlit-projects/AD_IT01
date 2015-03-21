@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inleiding enquete</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="javascript/jquery-1.11.2.min.js"></script>
+        <script src="javascript/javascript.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/opmaak.css">
+		<link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="Images/logo/logo.png">
+		<script src="http://vjs.zencdn.net/4.12/video.js"></script>
+		<style type="text/css">
+		  .vjs-default-skin { color: #3798f7; }
+		  .vjs-default-skin .vjs-play-progress,
+		  .vjs-default-skin .vjs-volume-level { background-color: #68b1f9 }
+		  .vjs-default-skin .vjs-control-bar,
+		  .vjs-default-skin .vjs-big-play-button { background: rgba(153,202,251,0.7) }
+		  .vjs-default-skin .vjs-slider { background: rgba(153,202,251,0.2333333333333333) }
+		  .vjs-default-skin .vjs-control-bar { font-size: 133% }
+		</style>
+    </head>
+    <body onload="hideFeedbackDiv(),hideVideoIntroDiv()">
+        <div class="container">
+            <div class="row" id="headRow">
+				<div class="col-md-3">
+                    <img src="images/logo/logo.png" width="65%" height="65%" alt="logo"/>
+                </div>
+				<div class="col-md-6" id="headTitle">
+                    <p> FINAH-NAH TEST</p>
+                </div>
+                
+            </div>
+            <div class="row">
+                <h1  style="text-align: center;">Welkom</h1><br/>
+            </div>
+			<div class="row">
+				<div class="col-md-4">
+                </div>
+				<div class="col-md-4" id="patient">
+                    <h2  style="text-align: center;">Ruben Cox</h2>
+                </div>
+				<div class="col-md-4" >
+				
+                </div>
+            </div>
+			<div class="row">
+				</br></br></br>
+            </div>
+			<div class="row text-center" id="info">
+			<div class="col-md-2">
+            </div>
+			<div class="col-md-8">
+			<p>Vooraleer we beginnen aan de enquete dien je <br/>eerst het inleidingsfilmpje te 
+					bekijken. <br/><br/>Hierin wordt uitgelegd hoe je de enquete moet invullen.
+					<br/><br/>Druk op de knop hieronder om de inleiding te starten!<br/><br/>
+			</p><br/><br/>
+            </div>
+			<div class="col-md-2">
+            </div>                
+            </div>
+			<div class="row text-center" id="videoIntro">
+				<div class="col-md-2">
+                </div>
+				<div class="col-md-8">
+                    <h2>Inleiding</h2><br/>
+					 <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
+					 preload="auto" width="100%" height="300px" poster="MY_VIDEO_POSTER.jpg"
+					 data-setup="{}">
+					 <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+					 <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
+					 <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+					</video>
+                </div>
+				<div class="col-md-2">
+                </div>
+            </div>
+			<div class="row">
+				<br/><br/>
+            </div>
+			<div class="row">
+				<div class="col-md-2">
+                </div>
+				<div class="col-md-8">
+                    <a id="startInleiding" onclick="hideInfoDiv()" class="btn btn-default btn-lg btn-block"><strong>Start Inleiding<strong></a>
+                </div>
+				<div class="col-md-2">
+                </div>
+            </div>
+			<div class="row">
+				<div class="col-md-2">
+                </div>
+				<div class="col-md-8">
+                    <a id="startEnquete" href="voorbeeldvraag.html" class="btn btn-default btn-lg btn-block"><strong>Start Enquete<strong></a>
+                </div>
+				<div class="col-md-2">
+                </div>
+            </div>
+           <div class="row">
+				<div id="filler">
+				</div>
+            </div>
+            
+
+        </div>
+    </body>
+</html>
