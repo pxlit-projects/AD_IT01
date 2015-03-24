@@ -22,12 +22,8 @@
                     <p> FINAH-NAH TEST</p>
                 </div>  
             </div>
-			<div class="row">
-			<br/><br/>
-			</div>
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
+                <div class="col-md-offset-2 col-md-8">
                 <?php
                 	session_start();
                 	/* Check if user is previously logged in */
@@ -73,7 +69,6 @@
 	            	}
 	            ?>
                 </div>
-                <div class="col-md-2"></div>
             </div>
         </div>
     </body>
