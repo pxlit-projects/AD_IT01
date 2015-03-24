@@ -28,7 +28,15 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
                 <?php
-	            	if(isset($_POST['username'], $_POST['password']))
+                	session_start();
+                	/* Check if user is previously logged in */
+                	if(isset($_SESSION['username'], $_SESSION['password']))
+                	{
+                		
+                	}
+                	/* User is not logged in yet */
+                	/* Check if any post data is send */
+	            	else if(isset($_POST['username'], $_POST['password']))
 	            	{
 	            		require_once 'medoo.min.php';
 	            		$database = new medoo();
@@ -53,6 +61,11 @@
 	            		{
 	            			include 'html/correctLogin.html';
 	            		}
+	            	}
+	            	/* User has not logged in yet and has not send any post data */
+	            	else
+	            	{
+	            		include 'html/loginForm.html';
 	            	}
 	            ?>
                 </div>
