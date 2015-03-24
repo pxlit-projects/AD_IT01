@@ -4,9 +4,9 @@ class medoo{
 	protected $database_type = 'mysql';
 	protected $charset = 'utf8';
 	protected $database_name = 'appdev_it01';
-	protected $server = 'localhost';
-	protected $username = 'root';
-	protected $password = '';
+	protected $server = '192.186.193.132';
+	protected $username = 'appdev';
+	protected $password = 'appdevit01';
 	protected $database_file;
 	protected $socket;
 	protected $port;
