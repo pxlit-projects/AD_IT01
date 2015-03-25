@@ -68,18 +68,9 @@
         </div>
     </div>
     <?php
-    if($user[0]['rank'] > 9)
-    {
-        echo '<div class="row" id="rowTopMargin50px">';
-        echo '<div class="col-md-offset-2 col-md-8">';
-        echo '<legend>Administrator</legend>';
-        echo '<form class="form-horizontal" action="newSurvey.php">';
-        echo '<div class="col-lg-8 col-md-offset-2">';
-        echo '<button type="submit" class="btn btn-default btn-lg btn-block">Nieuwe enquete aanmaken</button>';
-        echo '</div>';
-        echo '</form>';
-        echo '</div>';
-    }
-
+        if($user[0]['rank'] > 9)
+        {
+            include 'html/admin.html';
+        }
     ?>
 </div>
