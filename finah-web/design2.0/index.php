@@ -13,6 +13,8 @@
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Vjs Core Css -->
+	<link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
@@ -29,6 +31,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	 <!-- Vjs Custom javascript -->
+	<script src="http://vjs.zencdn.net/4.12/video.js"></script>
 
 </head>
 
@@ -47,7 +52,7 @@
                     <span class="icon-bar"></span>
                 </button>			
                 
-                <a class="navbar-brand" href="#page-top">FINAH-NAH   Enquete</a>
+                <a class="navbar-brand" id="Finah" href="#page-top">FINAH-NAH   Enquete</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,20 +86,33 @@
                     <div class="intro-text">
                         <span class="name">Welkom</span>
                         <hr class="star-light">
-                        <span class="skills">Ruben Cox</span>
-						<span> Vooraleer we beginnen aan de enquête dien je <br/>
+                        <span class="skills">Ruben Cox<br/><br/></span>
+					</div>
+					
+                </div>
+            </div>
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="intro-video-text">
+						Vooraleer we beginnen aan de enquête dien je <br/>
 						eerst het inleidingsfilmpje te bekijken. <br/><br/>
 						Hierin wordt uitgelegd hoe je de enquête moet invullen.<br/><br/>
 						Druk op de knop hieronder om de inleiding te starten!<br/><br/>
 						<br/><br/></span>
-                    </div>
+						<li class="page-scroll nodot">
+                        <a id="startInleiding" onclick="hideInfoDiv(), playVid()" href="#inleiding" class="startButtons page-scroll btn btn-default btn-lg btn-block"><strong>Start Inleiding</strong></a>
+						</li>
+						
+						</div>
+					
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
+    <!-- Inleiding Grid Section -->
+    <section id="inleiding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -103,90 +121,107 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
-                    </a>
+				<div class="container">
+                <div class="col-sm-12 portfolio-item ">
+                   <video id="inleidingVideo" class="video-js vjs-default-skin" controls
+					 preload="auto" width="100%" height="400px" poster="images/logo/logo.png"
+					 data-setup="{}">
+					 <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+					 <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm>
+					 <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+					</video>
                 </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/cake.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/circus.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/game.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/safe.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/submarine.png" class="img-responsive" alt="">
-                    </a>
                 </div>
             </div>
         </div>
+		
+    </section>
+	
+	<section id="goEnquete">
+		<li class="page-scroll nodot">
+			 <a id="startEnquete" href="#enquete" class="startButtons btn btn-default btn-lg btn-block"><strong>Start Enquête</strong></a>
+		</li>
+    </section>
+	<section id="goEnquete">
+		
     </section>
 
     <!-- About Section -->
-    <section class="success" id="about">
+    <section class="success" id="enquete">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>Enquete</h2>
                     <hr class="star-light">
                 </div>
             </div>
+           <div class="row">
+                <h1 style="text-align: center;">Leren en toepassen van kennis</h1>
+            </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                <div class="col-mod-2 col-md-offset-1">
+                    <h3>Iets nieuws leren (zoals het leren
+						omgaan met een nieuwe
+						GSM)
+					</h3>
                 </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+            </div>
+            <div class="row">
+                <div class="col-mod-2 col-md-offset-1">
+                    <img src="images/illustraties/b1.jpg" width="146" height="201" alt="voorbeeldillustratie"/>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> Download Theme
-                    </a>
+            </div>
+            
+            <div class="row">
+                <div class="col-mod-2 col-md-offset-1">
+                    <h4>Hoe ervaar ik dit onderdeel?</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1">
+                    <button type="button" onclick="showFeedbackDiv()"  href="#feedback" class="btn btn-lg btn-info" id="antwoord1">Verloopt naar wens</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="showFeedbackDiv()"  href="#feedback" class="btn btn-lg btn-info" id="antwoord2">Niet hinderlijk</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="showFeedbackDiv()"  href="#feedback" class="btn btn-lg btn-info" id="antwoord3">Hinderlijk voor de client</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="showFeedbackDiv()"  href="#feedback" class="btn btn-lg btn-info" id="antwoord4">Hinderlijk voor de mantelzorger</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="showFeedbackDiv()"  href="#feedback" class="btn btn-lg btn-info" id="antwoord5">Hinderlijk voor beide</button>
+                </div>
+            </div>
+            
+            <div id="feedback">
+                <div class="row">
+                    <div class="col-mod-2 col-md-offset-1">
+                        <h3>Wilt u dat we hieraan werken?</h3><br/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <a class="btn btn-default btn-lg btn-block">Ja</a>
+                    </div>
+                    <div class="col-md-5">
+                        <a class="btn btn-default btn-lg btn-block">Neen</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-2 col-md-offset-10">
+                    <a href="#" class="btn btn-default btn-lg btn-block">Volgende</a>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 50%;"></div>
+                    </div>
                 </div>
             </div>
         </div>
