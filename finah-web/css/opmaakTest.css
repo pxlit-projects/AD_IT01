@@ -6708,3 +6708,7 @@ label {
 #formMargin {
   margin-top: 35px;
 }
+
+legend {
+  padding-left: 15px;
+}
