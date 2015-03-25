@@ -8,8 +8,8 @@
         <script src="javascript/jquery-1.11.2.min.js"></script>
         <script src="javascript/javascript.js"></script>
         <script src="javascript/general.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/opmaakTest.css">
-		<link rel="icon" type="image/png" href="Images/logo/logo.png">
+        <link rel="stylesheet" type="text/css" href="css/customBootstrap.css">
+		<link rel="icon" type="image/png" href="images/logo/logo.png">
     </head>
     <body onload="start()">
                 <?php
