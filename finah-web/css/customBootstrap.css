@@ -6717,6 +6717,19 @@ label {
   margin-top: 50px;
 }
 
+#rowTopBottomMargin50px {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#vraagid {
+  visibility: hidden;
+  height: 0px;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
 legend {
   padding-left: 15px;
 }
