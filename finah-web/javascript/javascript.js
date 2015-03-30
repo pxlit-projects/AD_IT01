@@ -6,7 +6,6 @@ $('body').fadeIn(2000);
 });
 
 
-
 function playVid() { 
 	var vid = document.getElementById("inleidingVideo");
     vid.play(); 
@@ -22,7 +21,15 @@ function hideFeedbackDiv() {
 }
 
 function showFeedbackDiv() {
-    $('#feedback').css('visibility','visible').hide().fadeIn(1500);    
+    var feedback = document.getElementById("feedback");
+    if(feedback.style.visibility != 'visible')
+        $('#feedback').css('visibility','visible').hide().fadeIn(1500);    
+}
+
+function showNextButton() {
+    var nextButton = document.getElementById("nextButton");
+    if(nextButton.style.visibility != 'visible')
+        $('#nextButton').css('visibility','visible').hide().fadeIn(1500);    
 }
 
 function hideVideoIntroDiv() {
