@@ -15,50 +15,140 @@
     <body>
         <?php
             require_once 'medoo.min.php';
-            session_start();
-            if(!isset($_GET['surveyuser'], $_GET['authkey']) || !isset($_SESSION['surveyuser'], $_SESSION['authkey']))
+            if(!isset($_GET['surveyuser'], $_GET['authkey']))
             {
-                echo '<script language="JavaScript"> window.location.href ="index.php" </script>';
+                echo '<script type="text/javascript">alert ("De link is niet geldig.");</script>';
+                echo '<script language="JavaScript"> window.location.href ="index.php" </script>';  
             }
             include 'html/enqueteNav.html';
             $database = new medoo();
-            $user = $database->select(
+
+            $checkAuth = $database->has(
+                "surveyUsers", [
+                "AND" => [
+                "surveyUserid" => $_GET['surveyuser'],
+                "authkey" => $_GET['authkey']
+                ]]);
+
+            if(!$checkAuth)
+            {
+                echo '<script type="text/javascript">alert ("Het account is niet geldig.");</script>';
+                echo '<script language="JavaScript"> window.location.href ="index.php" </script>';
+            }
+
+            $user = $database->get(
                     "surveyUsers", "*", [
                     "AND" => [
-                    "surveryUserid" => $_GET['surveyuser'],
+                    "surveyUserid" => $_GET['surveyuser'],
                     "authkey" => $_GET['authkey']
                     ]]);
 
-            /* Loading page for the first time */
             if(!isset($_GET['vraagid']))
             {
-                $answers = $database->select("antwoorden", "*", [
-                    "userid" => $user[0]['userid']
+                $lastQuestion = $database->count(
+                    "antwoorden", [
+                    "userid" => $user['surveyUserid']
                     ]);
 
-                /* User has not filled in any questions yet */
-                if($answers == null)
+                /* Loading page for the first time */
+                if($lastQuestion == 0)
                 {
-                    include 'html/inleiding.html';
+                    $answers = $database->select("antwoorden", "*", [
+                        "userid" => $user['surveyUserid']
+                        ]);
+
+                    include 'php/inleiding.php';
+                }
+                else
+                {
+                    $amountofquestions = $database->count("vragen", "*");
+
+                    $question = $database->get("vragen", "*", [
+                    "vraagid" => $lastQuestion
+                    ]);
+
+                    $theme = $database->get("thema", "*", [
+                    "themaid" => $question['themaid']
+                    ]);
+
+                    echo '<div class="row" id="rowTopMargin50px">';
+                        echo '<div class="col-md-offset-2 col-md-8">';
+                            echo '<legend>' . $theme['themanaam'] . '</legend>';
+                            echo '<p>' . $question['vraag'] . '</p>';
+                            echo '<img src="' . $question['logo'] . '" alt="" class="img-responsive center-block" />';
+                            ?>
+                        <div id="labelDiv">
+                            <input type="radio" name="radio" id="radio1" class="radio"/>
+                            <label id="radioLabel" for="radio1">Verloopt naar wens</label>
+                        </div>
+
+                        <div id="labelDiv">
+                            <input type="radio" name="radio" id="radio2" class="radio"/>
+                            <label id="radioLabel" for="radio2">Probleem - niet hinderlijk</label>
+                        </div>
+
+                        <div id="labelDiv">   
+                            <input type="radio" name="radio" id="radio3" class="radio"/>
+                            <label id="radioLabel" for="radio3">Probleem - hinderlijk voor cliënt</label>
+                        </div>
+
+                        <div id="labelDiv">   
+                            <input type="radio" name="radio" id="radio4" class="radio"/>
+                            <label id="radioLabel" for="radio4">Probleem - hinderlijk voor mantelzorger</label>
+                        </div>
+
+                        <div id="labelDiv">   
+                            <input type="radio" name="radio" id="radio5" class="radio"/>
+                            <label id="radioLabel" for="radio5">Probleem - hinderlijk voor beide</label>
+                        </div>
+                        <?php
+                        echo '</div>';
+                    echo '</div>';
                 }
             }
             else
             {
                 $amountofquestions = $database->count("vragen", "*");
 
-                $question = $database->select("vragen", "*", [
-                    "vraagid" => $_POST['vraagid']
+                $question = $database->get("vragen", "*", [
+                    "vraagid" => $_GET['vraagid']
                     ]);
 
-                $theme = $database->select("thema", "*", [
-                    "themaid" => $question[0]['themaid']
+                $theme = $database->get("thema", "*", [
+                    "themaid" => $question['themaid']
                     ]);
 
                 echo '<div class="row" id="rowTopMargin50px">';
                     echo '<div class="col-md-offset-2 col-md-8">';
-                        echo '<legend>' . $theme[0]['themanaam'] . '</legend>';
-                        echo '<p>' . $question[0]['vraag'] . '</p>';
-                        echo '<img src="images/illustraties/d155.jpg" alt="" class="img-responsive center-block" />';
+                        echo '<legend>' . $theme['themanaam'] . '</legend>';
+                        echo '<img src="' . $question['logo'] . '" alt="" class="img-responsive center-block" />';
+                        echo '<p>' . $question['vraag'] . '</p>';
+                        ?>
+                        <div id="labelDiv">
+                            <input type="radio" name="radio" id="radio1" class="radio"/>
+                            <label id="radioLabel" for="radio1">Verloopt naar wens</label>
+                        </div>
+
+                        <div id="labelDiv">
+                            <input type="radio" name="radio" id="radio2" class="radio"/>
+                            <label id="radioLabel" for="radio2">Probleem - niet hinderlijk</label>
+                        </div>
+
+                        <div id="labelDiv">   
+                            <input type="radio" name="radio" id="radio3" class="radio"/>
+                            <label id="radioLabel" for="radio3">Probleem - hinderlijk voor cliënt</label>
+                        </div>
+
+                        <div id="labelDiv">   
+                            <input type="radio" name="radio" id="radio4" class="radio"/>
+                            <label id="radioLabel" for="radio4">Probleem - hinderlijk voor mantelzorger</label>
+                        </div>
+
+                        <div id="labelDiv">   
+                            <input type="radio" name="radio" id="radio5" class="radio"/>
+                            <label id="radioLabel" for="radio5">Probleem - hinderlijk voor beide</label>
+                        </div>
+                <?php
                     echo '</div>';
                 echo '</div>';
             }
