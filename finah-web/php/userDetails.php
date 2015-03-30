@@ -15,11 +15,10 @@
         </div>
     </div>
     <?php
-        include 'html/userInfo.html';
-        
         if($user[0]['rank'] > 9)
         {
             include 'html/admin.html';
         }
+        include 'html/userInfo.html';
     ?>
 </div>

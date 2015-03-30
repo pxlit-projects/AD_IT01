@@ -5,9 +5,11 @@
         <meta charset="windows-1252">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="javascript/jquery-1.11.2.min.js"></script>
         <script src="javascript/javascript.js"></script>
-        <script src="javascript/general.js"></script>
+        <script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui-1.10.4.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.js" type="text/javascript"></script>
+		<script src="js/general.js" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/opmaak.css">
 		<link rel="icon" type="image/png" href="Images/logo/logo.png">
@@ -71,5 +73,7 @@
                 </div>
             </div>
         </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     </body>
 </html>

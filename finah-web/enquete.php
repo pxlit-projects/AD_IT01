@@ -8,6 +8,7 @@
         <script src="javascript/jquery-1.11.2.min.js"></script>
         <script src="javascript/javascript.js"></script>
         <script src="javascript/general.js"></script>
+        <script src="javascript/bootstrap.js"></script>
         <link rel="stylesheet" type="text/css" href="css/customBootstrap.css">
 		<link rel="icon" type="image/png" href="images/logo/logo.png">
     </head>
@@ -15,21 +16,21 @@
         <?php
             require_once 'medoo.min.php';
             session_start();
-            if(!isset($_SESSION['username'], $_SESSION['password']))
+            if(!isset($_GET['surveyuser'], $_GET['authkey']) || !isset($_SESSION['surveyuser'], $_SESSION['authkey']))
             {
                 echo '<script language="JavaScript"> window.location.href ="index.php" </script>';
             }
             include 'html/enqueteNav.html';
             $database = new medoo();
             $user = $database->select(
-                    "users", "*", [
+                    "surveyUsers", "*", [
                     "AND" => [
-                    "username" => $_SESSION['username'],
-                    "password" => $_SESSION['password']
+                    "surveryUserid" => $_GET['surveyuser'],
+                    "authkey" => $_GET['authkey']
                     ]]);
 
             /* Loading page for the first time */
-            if(!isset($_POST['vraagid']))
+            if(!isset($_GET['vraagid']))
             {
                 $answers = $database->select("antwoorden", "*", [
                     "userid" => $user[0]['userid']
