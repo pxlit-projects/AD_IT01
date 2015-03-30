@@ -6813,7 +6813,7 @@ input.radio:checked ~ label:before {
   content:'\2714';
   text-indent: .9em;
   color: #9CE2AE;
-  background-color: #4DCB6D;
+  background-color: #4DAECB;
 }
 
 input.radio:checked ~ label {
@@ -6823,4 +6823,13 @@ input.radio:checked ~ label {
 /* radio focus */
 input.radio:focus ~ label:before {
   box-shadow: 0 0 0 3px #999;
+}
+
+#feedback {
+  margin-top: 75px;
+  visibility: hidden;
+}
+
+#nextButton {
+  visibility: hidden;
 }

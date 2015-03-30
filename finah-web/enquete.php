@@ -124,29 +124,51 @@
                         echo '<img src="' . $question['logo'] . '" alt="" class="img-responsive center-block" />';
                         echo '<p>' . $question['vraag'] . '</p>';
                         ?>
-                        <div id="labelDiv">
-                            <input type="radio" name="radio" id="radio1" class="radio"/>
-                            <label id="radioLabel" for="radio1">Verloopt naar wens</label>
-                        </div>
+                        <div class="row">
+                            <form>
+                                <div class="col-md-6">
+                                    <div id="labelDiv">
+                                        <input type="radio" name="radio" id="radio1" class="radio" value="1" onclick="showFeedbackDiv()"/>
+                                        <label id="radioLabel" for="radio1">Verloopt naar wens</label>
+                                    </div>
 
-                        <div id="labelDiv">
-                            <input type="radio" name="radio" id="radio2" class="radio"/>
-                            <label id="radioLabel" for="radio2">Probleem - niet hinderlijk</label>
-                        </div>
+                                    <div id="labelDiv">
+                                        <input type="radio" name="radio" id="radio2" class="radio" value="2" onclick="showFeedbackDiv()"/>
+                                        <label id="radioLabel" for="radio2">Probleem - niet hinderlijk</label>
+                                    </div>
 
-                        <div id="labelDiv">   
-                            <input type="radio" name="radio" id="radio3" class="radio"/>
-                            <label id="radioLabel" for="radio3">Probleem - hinderlijk voor cliënt</label>
-                        </div>
+                                    <div id="labelDiv">   
+                                        <input type="radio" name="radio" id="radio3" class="radio" value="3" onclick="showFeedbackDiv()"/>
+                                        <label id="radioLabel" for="radio3">Probleem - hinderlijk voor cliënt</label>
+                                    </div>
 
-                        <div id="labelDiv">   
-                            <input type="radio" name="radio" id="radio4" class="radio"/>
-                            <label id="radioLabel" for="radio4">Probleem - hinderlijk voor mantelzorger</label>
-                        </div>
+                                    <div id="labelDiv">   
+                                        <input type="radio" name="radio" id="radio4" class="radio" value="4" onclick="showFeedbackDiv()"/>
+                                        <label id="radioLabel" for="radio4">Probleem - hinderlijk voor mantelzorger</label>
+                                    </div>
 
-                        <div id="labelDiv">   
-                            <input type="radio" name="radio" id="radio5" class="radio"/>
-                            <label id="radioLabel" for="radio5">Probleem - hinderlijk voor beide</label>
+                                    <div id="labelDiv">   
+                                        <input type="radio" name="radio" id="radio5" class="radio" value="5" onclick="showFeedbackDiv()"/>
+                                        <label id="radioLabel" for="radio5">Probleem - hinderlijk voor beide</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="feedback">
+                                    <p>Wilt u dat we hieraan werken?</p>
+
+                                    <div id="labelDiv">
+                                        <input type="radio" name="radio2" id="radio6" class="radio" value="1" onclick="showNextButton()" />
+                                        <label id="radioLabel" for="radio6">Ja</label>
+                                    </div>
+
+                                    <div id="labelDiv">
+                                        <input type="radio" name="radio2" id="radio7" class="radio" value="0" onclick="showNextButton()" />
+                                        <label id="radioLabel" for="radio7">Neen</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-offset-8" id="nextButton">
+                                    <button type="button" class="btn btn-default btn-lg btn-block">Volgende</button>
+                                </div>
+                            </form>
                         </div>
                 <?php
                     echo '</div>';
