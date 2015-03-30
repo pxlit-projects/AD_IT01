@@ -15,7 +15,11 @@
         <form class="form-horizontal" method="get" action="enquete.php">
             <fieldset>
                 <div class="form-group">
-                	<input type="text" class="form-control" id="vraagid" name="vraagid" value="1">
+                <?php
+                	echo '<input type="text" class="form-control" id="vraagid" name="surveyuser" value="' . $_GET['surveyuser'] . '">';
+                	echo '<input type="text" class="form-control" id="vraagid" name="authkey" value="' . $_GET['authkey'] . '">';
+                	echo '<input type="text" class="form-control" id="vraagid" name="vraagid" value="1">';
+                ?>
                     <div class="col-lg-2 col-md-offset-8">
                         <button type="submit" class="btn btn-default btn-lg btn-block">Volgende</button>
                     </div>
