@@ -8,8 +8,17 @@
         <script src="javascript/jquery-1.11.2.min.js"></script>
         <script src="javascript/javascript.js"></script>
         <script src="javascript/general.js"></script>
+
+		<script src="javascript/bootstrap.js"></script>
+		<script src="javascript/freelancer.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/freelancer.css">
+
         <script src="javascript/bootstrap.js"></script>
         <link rel="stylesheet" type="text/css" href="css/customBootstrap.css">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+		
 		<link rel="icon" type="image/png" href="images/logo/logo.png">
     </head>
     <body>
