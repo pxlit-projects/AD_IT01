@@ -1,4 +1,5 @@
-﻿using FirstFloor.ModernUI.Windows.Controls;
+﻿using FirstFloor.ModernUI.Presentation;
+using FirstFloor.ModernUI.Windows.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,11 @@ namespace ModernUINavigationApp1
         public MainWindow()
         {
             InitializeComponent();
+            this.MenuLinkGroups = new LinkGroupCollection();
+            var linkTestGroup1 = new LinkGroup { DisplayName = "TestGroup1" };
+            var link1 = new Link { DisplayName = "Link 1", Source = new Uri("/Pages/Link1.xaml", UriKind.Relative) };
+            linkTestGroup1.Links.Add(link1);
+            this.MenuLinkGroups.Add(linkTestGroup1);
         }
     }
 }
