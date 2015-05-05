@@ -23,7 +23,6 @@ namespace ModernUINavigationApp1.Pages.Settings
         public Appearance()
         {
             InitializeComponent();
-
             // create and assign the appearance view model
             this.DataContext = new AppearanceViewModel();
         }

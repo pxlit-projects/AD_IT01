@@ -23,6 +23,10 @@ namespace ModernUINavigationApp1.Pages
         public TabPage1()
         {
             InitializeComponent();
+            if (MainWindow.login == false)
+            {
+                MainWindow.LoginWindow();
+            }
         }
     }
 }

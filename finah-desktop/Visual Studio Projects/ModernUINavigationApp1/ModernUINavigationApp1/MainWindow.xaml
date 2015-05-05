@@ -1,10 +1,52 @@
-﻿<mui:ModernWindow MenuLinkGroups="{Binding MenuLinkGroups}"
-                  x:Class="ModernUINavigationApp1.MainWindow"
+﻿<mui:ModernWindow x:Class="ModernUINavigationApp1.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-        Title="FINAH Login" IsTitleVisible="True"
-        ContentSource="/Pages/Home.xaml">
+        Title="FINAH-NAH" IsTitleVisible="True"
+        LogoData="M 10,100 C 10,300 300,-200 300,100"        
+        ContentSource="/Pages/Welkom.xaml">
 
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Home">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="welkom" Source="/Pages/Welkom.xaml" />
+                <mui:Link DisplayName="profiel" Source="/Pages/Home.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Patiënten">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Overzicht" Source="/Pages/BasicPage1.xaml" />
+                <mui:Link DisplayName="Nieuwe Patiënt" Source="/Pages/TabPage1.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Rapporten">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="overzicht" Source="/Pages/TabPage2.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Aanvraag">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Overzicht" Source="/Pages/BasicPage1.xaml" />
+                <mui:Link DisplayName="Nieuwe Aanvraag" Source="/Pages/TabPage1.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="settings" GroupKey="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="software" Source="/Pages/SettingsPage.xaml" />
 
-    </mui:ModernWindow>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="settings" GroupKey="render">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="software" Source="/Pages/SettingsPage.xaml" />
+
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="logout" Source="/Pages/SettingsPage.xaml" />
+        <mui:Link DisplayName="settings" Source="/Pages/SettingsPage.xaml" />
+        <mui:Link DisplayName="website" Source="http://mui.codeplex.com" />
+    </mui:ModernWindow.TitleLinks>
+</mui:ModernWindow>

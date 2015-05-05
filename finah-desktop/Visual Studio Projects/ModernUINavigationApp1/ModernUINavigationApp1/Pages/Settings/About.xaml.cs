@@ -23,6 +23,10 @@ namespace ModernUINavigationApp1.Pages.Settings
         public About()
         {
             InitializeComponent();
+            if (MainWindow.login == false)
+            {
+                MainWindow.LoginWindow();
+            }
         }
     }
 }

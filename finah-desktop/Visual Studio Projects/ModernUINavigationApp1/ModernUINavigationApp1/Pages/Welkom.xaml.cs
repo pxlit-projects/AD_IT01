@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ModernUINavigationApp1.Pages
 {
     /// <summary>
-    /// Interaction logic for SettingsPage.xaml
+    /// Interaction logic for Welkom.xaml
     /// </summary>
-    public partial class SettingsPage : UserControl
+    public partial class Welkom : UserControl
     {
-        public SettingsPage()
+        public Welkom()
         {
             InitializeComponent();
             if (MainWindow.login == false)

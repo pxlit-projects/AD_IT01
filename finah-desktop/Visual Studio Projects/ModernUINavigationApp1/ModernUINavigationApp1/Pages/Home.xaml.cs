@@ -23,11 +23,11 @@ namespace ModernUINavigationApp1.Pages
         public Home()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
+            if (MainWindow.login == false)
+            {
+                MainWindow.LoginWindow();
+            }
+            
         }
     }
 }
