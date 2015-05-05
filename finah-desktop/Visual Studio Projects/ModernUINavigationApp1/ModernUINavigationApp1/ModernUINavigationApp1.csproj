@@ -57,6 +57,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Pages\Overzicht_Patienten.xaml.cs">
+      <DependentUpon>Overzicht_Patienten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Patienten\Patient1.xaml.cs">
+      <DependentUpon>Patient1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Welkom.xaml.cs">
       <DependentUpon>Welkom.xaml</DependentUpon>
     </Compile>
@@ -73,6 +79,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overzicht_Patienten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Patienten\Patient1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

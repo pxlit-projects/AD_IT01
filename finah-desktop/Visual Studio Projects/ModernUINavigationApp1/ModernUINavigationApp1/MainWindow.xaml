@@ -15,7 +15,7 @@
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="Patiënten">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Overzicht" Source="/Pages/BasicPage1.xaml" />
+                <mui:Link DisplayName="Overzicht" Source="/Pages/Overzicht_Patienten.xaml" />
                 <mui:Link DisplayName="Nieuwe Patiënt" Source="/Pages/TabPage1.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
