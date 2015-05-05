@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="ModernUINavigationApp1.Pages.Overzicht_Patienten"
+﻿<UserControl x:Class="ModernUINavigationApp1.Pages.Overzicht_Aanvraag"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,11 +8,11 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
         <!-- TODO: set @SelectedSource -->
-        <mui:ModernTab Layout="List" SelectedSource="Pages/Patienten/Patient1.xaml" >
+        <mui:ModernTab Layout="List" SelectedSource="Pages/Aanvraag/Lopend.xaml" >
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
-                <mui:Link DisplayName="Patiënt 1" Source="Pages/Patienten/Patient1.xaml" />
-                <mui:Link DisplayName="Patiënt 2" />
+                <mui:Link DisplayName="Lopend" Source="Pages/Aanvraag/Lopend.xaml"/>
+                <mui:Link DisplayName="Ongeopend" Source="Pages/Aanvraag/Ongeopend.xaml"/>
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>

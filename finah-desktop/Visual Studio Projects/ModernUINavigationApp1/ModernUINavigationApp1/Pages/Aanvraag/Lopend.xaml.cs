@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModernUINavigationApp1.Pages
+namespace ModernUINavigationApp1.Pages.Aanvraag
 {
     /// <summary>
-    /// Interaction logic for Welkom.xaml
+    /// Interaction logic for Lopend.xaml
     /// </summary>
-    public partial class Welkom : UserControl
+    public partial class Lopend : UserControl
     {
-        public Welkom()
+        public Lopend()
         {
             InitializeComponent();
-            if (MainWindow.login == false)
-            {
-                
-            }
         }
     }
 }

@@ -16,17 +16,13 @@ using System.Windows.Shapes;
 namespace ModernUINavigationApp1.Pages
 {
     /// <summary>
-    /// Interaction logic for Welkom.xaml
+    /// Interaction logic for Overzicht_Rapporten.xaml
     /// </summary>
-    public partial class Welkom : UserControl
+    public partial class Overzicht_Rapporten : UserControl
     {
-        public Welkom()
+        public Overzicht_Rapporten()
         {
             InitializeComponent();
-            if (MainWindow.login == false)
-            {
-                
-            }
         }
     }
 }

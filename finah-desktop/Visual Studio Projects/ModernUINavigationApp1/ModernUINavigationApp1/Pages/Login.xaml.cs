@@ -30,7 +30,7 @@ namespace ModernUINavigationApp1.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.login = true;
-            MainWindow.LoginClose();
+            
         }
 
         

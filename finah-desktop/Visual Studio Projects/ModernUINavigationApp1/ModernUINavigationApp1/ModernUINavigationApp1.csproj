@@ -36,6 +36,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -44,9 +46,11 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -57,11 +61,35 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Pages\Aanvraag\Lopend.xaml.cs">
+      <DependentUpon>Lopend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Aanvraag\NieuwAanvraag.xaml.cs">
+      <DependentUpon>NieuwAanvraag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Aanvraag\Ongeopend.xaml.cs">
+      <DependentUpon>Ongeopend.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Logout.xaml.cs">
+      <DependentUpon>Logout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overzicht_Aanvraag.xaml.cs">
+      <DependentUpon>Overzicht_Aanvraag.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Overzicht_Patienten.xaml.cs">
       <DependentUpon>Overzicht_Patienten.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Overzicht_Rapporten.xaml.cs">
+      <DependentUpon>Overzicht_Rapporten.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Patienten\NieuwPatient.xaml.cs">
+      <DependentUpon>NieuwPatient.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Patienten\Patient1.xaml.cs">
       <DependentUpon>Patient1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Rapporten\Rapporten.xaml.cs">
+      <DependentUpon>Rapporten.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Welkom.xaml.cs">
       <DependentUpon>Welkom.xaml</DependentUpon>
@@ -74,6 +102,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Aanvraag\Lopend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Aanvraag\NieuwAanvraag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Aanvraag\Ongeopend.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -82,11 +122,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Logout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overzicht_Aanvraag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Overzicht_Patienten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Overzicht_Rapporten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Patienten\NieuwPatient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Patienten\Patient1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Rapporten\Rapporten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,6 +193,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

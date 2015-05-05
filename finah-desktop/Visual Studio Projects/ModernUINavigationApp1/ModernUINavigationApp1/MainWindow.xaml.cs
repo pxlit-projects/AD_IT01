@@ -41,6 +41,10 @@ namespace ModernUINavigationApp1
             var LoginCommand = new RelayCommand(o => LoginWindow(o));
             LinkNavigator.Commands.Add(new Uri("cmd://sayHello", UriKind.Absolute), LoginCommand);
              */
+            LogoutCommand = new RelayCommand(o => Logout());
+            LinkNavigator.Commands.Add(new Uri("cmd://sayHello", UriKind.Absolute), LogoutCommand);
+        
+
             if (login == false)
             {
                 
@@ -48,9 +52,14 @@ namespace ModernUINavigationApp1
 
             
         }
-        public RelayCommand LoginCommand { get; private set; }
+        public RelayCommand LogoutCommand { get; private set; }
 
-        public static void LoginWindow()
+        public static void Logout()
+        {
+            login = false;
+        }
+
+       /* public static void LoginWindow()
         {
                        
              LoginW = new ModernWindow
@@ -67,7 +76,7 @@ namespace ModernUINavigationApp1
         {
             LoginW.Close();
         }
-
+        */
         public static void enableLogin()
         {
             login = true;

@@ -25,7 +25,7 @@ namespace ModernUINavigationApp1.Pages
             InitializeComponent();
             if (MainWindow.login == false)
             {
-                MainWindow.LoginWindow();
+                
             }
             
         }

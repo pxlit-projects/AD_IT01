@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstFloor.ModernUI.Windows.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,10 +24,7 @@ namespace ModernUINavigationApp1.Pages
         public SettingsPage()
         {
             InitializeComponent();
-            if (MainWindow.login == false)
-            {
-                MainWindow.LoginWindow();
-            }
+            
         }
     }
 }

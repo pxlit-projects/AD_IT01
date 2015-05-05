@@ -13,20 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModernUINavigationApp1.Pages
+namespace ModernUINavigationApp1.Pages.Patienten
 {
     /// <summary>
-    /// Interaction logic for Welkom.xaml
+    /// Interaction logic for NieuwPatient.xaml
     /// </summary>
-    public partial class Welkom : UserControl
+    public partial class NieuwPatient : UserControl
     {
-        public Welkom()
+        public NieuwPatient()
         {
             InitializeComponent();
-            if (MainWindow.login == false)
-            {
-                
-            }
+        }
+
+        private void WindowsFormsHost_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
         }
     }
 }

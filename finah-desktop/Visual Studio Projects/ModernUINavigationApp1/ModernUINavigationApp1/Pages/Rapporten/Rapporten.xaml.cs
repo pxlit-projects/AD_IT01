@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModernUINavigationApp1.Pages
+namespace ModernUINavigationApp1.Pages.Rapporten
 {
     /// <summary>
-    /// Interaction logic for Welkom.xaml
+    /// Interaction logic for Rapporten.xaml
     /// </summary>
-    public partial class Welkom : UserControl
+    public partial class Rapporten : UserControl
     {
-        public Welkom()
+        public Rapporten()
         {
             InitializeComponent();
-            if (MainWindow.login == false)
-            {
-                
-            }
         }
     }
 }
