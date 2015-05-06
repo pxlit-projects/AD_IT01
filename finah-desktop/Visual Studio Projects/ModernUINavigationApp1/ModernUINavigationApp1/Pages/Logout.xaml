@@ -10,14 +10,14 @@
             <StackPanel>
                 <TextBlock Text="FINAH Login" Style="{StaticResource Heading2}" HorizontalAlignment="Center" Margin="0,20,0,50" FontSize="30"/>
                 <Label Content="_Gebruikersnaam" Width="300" Margin="0,0,0,5"/>
-                <TextBox Height="23" TextWrapping="Wrap" Width="300" Margin="0,0,0,20" TextChanged="TextBox_TextChanged">
+                <TextBox x:Name="usernameTextBox" Height="23" TextWrapping="Wrap" Width="300" Margin="0,0,0,20" TextChanged="TextBox_TextChanged">
                     <TextBox.ToolTip>
                         <TextBlock MaxWidth="400" TextWrapping="Wrap"
                            Text="Vul hier u gebruikersnaam in." />
                     </TextBox.ToolTip>
                 </TextBox>
                 <Label Content="_Wachtwoord" Width="300" Margin="0,0,0,5"/>
-                <PasswordBox Width="300" Margin="0,0,0,40">
+                <PasswordBox x:Name="passwordTextBox" Width="300" Margin="0,0,0,40">
                     <PasswordBox.ToolTip>
                         <TextBlock MaxWidth="400" TextWrapping="Wrap"
                            Text="Vul hier u wachtwoord in." />

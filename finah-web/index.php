@@ -12,6 +12,7 @@
 
 		<script src="javascript/bootstrap.js"></script>
 		<script src="javascript/freelancer.js"></script>
+		<script src="javascript/own.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/freelancer.css">
 
         <script src="javascript/bootstrap.js"></script>

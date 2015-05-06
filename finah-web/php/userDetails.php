@@ -1,6 +1,6 @@
         
 	<header>
-        <div class="container">
+        <div class="container" id="welcome">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-text">
@@ -30,9 +30,11 @@
         </div>
     </header>
     <?php
+		include 'html/userInfo.html';
         if($user[0]['rank'] > 9)
         {
             include 'html/admin.html';
         }
-        include 'html/userInfo.html';
+		include 'html/footer.html';
+        
     ?>

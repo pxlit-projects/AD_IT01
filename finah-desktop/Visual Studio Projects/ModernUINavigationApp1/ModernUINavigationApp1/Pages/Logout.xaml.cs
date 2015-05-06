@@ -30,6 +30,9 @@ namespace ModernUINavigationApp1.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.login = true;
+
+            Login(usernameTextBox.Text, passwordTextBox.Password);
+
             BBCodeBlock bs = new BBCodeBlock();
             try
             {
@@ -39,6 +42,11 @@ namespace ModernUINavigationApp1.Pages
             {
                 ModernDialog.ShowMessage(error.Message, FirstFloor.ModernUI.Resources.NavigationFailed, MessageBoxButton.OK);
             }
+        }
+
+        private void Login(string username, string password)
+        {
+            //MessageBox.Show("Username: " + username + "\nPassword: " + password);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

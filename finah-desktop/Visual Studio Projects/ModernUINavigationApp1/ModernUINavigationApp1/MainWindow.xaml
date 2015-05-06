@@ -47,6 +47,6 @@
     <mui:ModernWindow.TitleLinks>
         <mui:Link DisplayName="logout" Source="/Pages/Logout.xaml" />
         <mui:Link DisplayName="settings" Source="/Pages/SettingsPage.xaml" />
-        <mui:Link DisplayName="website" Source="http://www.ernah.be/finah/overzicht" />
+        <mui:Link DisplayName="website" Source="http://www.pxlcoding.com/appdev/" />
     </mui:ModernWindow.TitleLinks>
 </mui:ModernWindow>

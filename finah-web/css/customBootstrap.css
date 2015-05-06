@@ -6718,6 +6718,9 @@ label {
 }
 
 #formMargin {
+  	margin-top: 20%;
+}
+#formMargin2 {
   	margin-top: 35px;
 }
 
@@ -6733,7 +6736,27 @@ label {
   	margin-top: 50px;
   	margin-bottom: 50px;
 }
-
+.bigButton{
+	height: 100px;
+	margin-top: 20%;
+	font-size: 150%;
+}
+.profileLogo{
+	height: 75%;
+	width: 75%;
+	margin-top: 5%;
+}
+.profileData{
+	margin-top: 3%;
+}
+#WwAanpassen{
+		margin-top: 5%;
+		display: none;
+}
+#GgAanpassen{
+		margin-top: 5%;
+		display: none;
+}
 #vraagid {
 	visibility: hidden;
 	height: 0px;
@@ -6851,4 +6874,8 @@ input.radio:focus ~ label:before {
 
 #nextButton {
   visibility: hidden;
+}
+#success-alert{
+	margin-top:10%;
+	text-align:center;
 }
