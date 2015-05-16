@@ -5,10 +5,11 @@
                     <p class="title">PROFIEL</p>
                     <hr class="star-primary">
 					<span class="skills">
-						<h1></h1>
+						<h1 class="changeL" id="textProf">Profiel</h1>
 					</span>
 				</div>
 			</div>
+		<div class="container" id="ProfielData">
             <div class="row">
 				
                 <div class="col-lg-4 col-lg-offset-3">
@@ -22,15 +23,9 @@
 					<label for="veld">Veld:</label>
 					<p>AON</p>
 				</div>
-				
 			</div>
-					<div class="container" id="WwAanpassen">
-			<div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="title">WACHTWOORD WIJZIGEN</p>
-                    <hr class="star-primary">
-				</div>
-			</div>
+		</div>
+		<div class="container" id="WwAanpassen">
 			<div class="row">
 				<form class="form-horizontal" method="post" action="changePassword.php">
 							<div class="row control-group">
@@ -64,12 +59,6 @@
 		</div>
 		<div class="container" id="GgAanpassen">
 			<div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="title">GEGEVENS WIJZIGEN</p>
-                    <hr class="star-primary">
-				</div>
-			</div>
-			<div class="row">
 				<form class="form-horizontal" method="post" action="changePassword.php">
 							<div class="row control-group">
 								<div class="form-group col-xs-12 floating-label-form-group controls">
@@ -101,13 +90,16 @@
 			</div>
 		</div>
 			<div class="row">
-				
-                <div class="col-lg-4 col-lg-offset-1" id="WwWijzigen">
-					<button type="button" class="btn btn-default btn-block bigButton">Wachtwoord Wijzigen</button>
+				<div class="col-lg-4 " id="DProfiel">
+					<a href="#profiel" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Data</button></a>
 				</div>
-				<div class="col-lg-4 col-lg-offset-2" id="GegWijzigen">
-					<button type="button" class="btn btn-default btn-block bigButton">Gegevens Wijzigen</button>
+                <div class="col-lg-4 " id="WwWijzigen">
+					<a href="#profiel" class="noLink"><button type="button" class="btn btn-default btn-block bigButton" >Wachtwoord Wijzigen</button></a>
 				</div>
+				<div class="col-lg-4 " id="GegWijzigen">
+					<a href="#profiel" class="noLink"><button type="button" class="btn btn-default btn-block bigButton" action="#profiel" >Gegevens Wijzigen</button></a>
+				</div>
+
 				
 			</div>
 </section>
@@ -117,15 +109,12 @@
 					<div class="col-lg-12 text-center">
 						<p class="successTitle">PATIENTEN</p>
 						<hr class="star-light">
+						<span class="skills">
+						<h1 class="changeL light" id="textPat"></h1>
+						</span>
 					</div>
 			</div>
-					<div class="container" id="OverzPat">
-			<div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="successTitle">OVERZICHT</p>
-                    <hr class="star-light">
-				</div>
-			</div>
+		<div class="container" id="OverzPat">
 			<div class="row">
 				<nav class="col-lg-4 col-lg-offset-4">
 				  <ul class="pagination pagination-lg">
@@ -149,12 +138,6 @@
 			</div>
 		</div>
 		<div class="container" id="NieuwPat">
-			<div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="successTitle">NIEUWE PATIENT</p>
-                    <hr class="star-light">
-				</div>
-			</div>
 			<div class="row">
 				<form class="form-horizontal" method="post" action="newPatient.php">
 							<div class="row control-group">
@@ -188,10 +171,10 @@
 		</div>
 			<div class="row">				
                 <div class="col-lg-4 col-lg-offset-1" id="OPatient">
-					<button type="button" class="btn btn-default btn-block bigButton">Overzicht</button>
+					<a href="#patienten" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Overzicht</button></a>
 				</div>
 				<div class="col-lg-4 col-lg-offset-2" id="NPatient">
-					<button type="button" class="btn btn-default btn-block bigButton">Nieuwe Patient</button>
+					<a href="#patienten" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Nieuwe Patient</button></a>
 				</div>
 			</div>
 		</div>
@@ -227,15 +210,93 @@
 					
 				</div>
 			</div>
+			<div class="container" id="ALopende">
+			<div class="row">
+				<nav class="col-lg-4 col-lg-offset-4">
+				  <ul class="pagination pagination-lg">
+					<li>
+					  <a href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					  </a>
+					</li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+					  <a href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					  </a>
+					</li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+		<div class="container" id="AOngeopend">
+			<div class="row">
+				<nav class="col-lg-4 col-lg-offset-4">
+				  <ul class="pagination pagination-lg">
+					<li>
+					  <a href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					  </a>
+					</li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+					  <a href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					  </a>
+					</li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+		<div class="container" id="ANieuw">
+			<div class="row">
+				<form class="form-horizontal" method="post" action="newPatient.php">
+							<div class="row control-group">
+								<div class="form-group col-xs-12 floating-label-form-group controls">
+									<label for="naam" >Naam</label>
+									<input type="text" class="form-control" placeholder="Ruben Cox" id="naam" name="naam" required data-validation-required-message="Je moet een naam invullen.">
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="row control-group">
+								<div class="form-group col-xs-12 floating-label-form-group controls">
+									<label for="leeftijd" >Leeftijd</label>
+									<input type="text" class="form-control" placeholder="21" id="leeftijd" name="leeftijd" required data-validation-required-message="Je moet je leeftijd invullen.">
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="row control-group">
+								<div class="form-group col-xs-12 floating-label-form-group controls">
+									<label for="Veld">Veld</label>
+									<input type="text" class="form-control" placeholder="AON" name="veld" id="veld" required data-validation-required-message="Geef je veld van expertise op.">
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-4 col-lg-offset-4">
+									<button type="submit" class="btn btn-default btn-lg btn-block bigButton">Gegevens aanpassen</button>
+								</div>
+							</div>
+				</form>
+			</div>
+		</div>
 			<div class="row">				
                 <div class="col-lg-4 col-lg-offset-" id="LAanvraag">
-					<button type="button" class="btn btn-default btn-block bigButton">Lopende</button>
+					<a href="#aanvraag" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Lopende</button></a>
 				</div>
 				<div class="col-lg-4 col-lg-offset-" id="OAanvraag">
-					<button type="button" class="btn btn-default btn-block bigButton">Ongeopend</button>
+					<a href="#aanvraag" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Ongeopend</button></a>
 				</div>
 				<div class="col-lg-4 col-lg-offset-" id="NAanvraag">
-					<button type="button" class="btn btn-default btn-block bigButton">Nieuwe Aanvraag</button>
+					<a href="#aanvraag" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Nieuwe Aanvraag</button></a>
 				</div>
 			</div>
             <div class="row">
