@@ -41,6 +41,18 @@
                             include 'html/logoutNavAdmin.html';
                         else
                             include 'html/logoutNav.html';
+
+                        if(isset($_GET['updatePass']))
+                        {
+                            if($_GET['updatePass'] == "true")
+                            {
+                                include 'html/updatePass.html';
+                            }
+                            else if($_GET['updatePass'] == "false")
+                            {
+                                include 'html/failedUpdatePass.html';
+                            }
+                        }
                         include 'php/userDetails.php';
                     }
                     /* User is not logged in yet */

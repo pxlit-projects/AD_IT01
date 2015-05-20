@@ -32,7 +32,7 @@
 		</div>
 		<div class="container" id="WwAanpassen">
 			<div class="row">
-				<form class="form-horizontal" method="post" action="changePassword.php">
+				<form class="form-horizontal" method="post" action="php/changePassword.php">
 						<div class="row control-group">
 							<div class="form-group col-xs-12 floating-label-form-group controls">
 								<label for="oldPassword" >Huidig wachtwoord</label>
