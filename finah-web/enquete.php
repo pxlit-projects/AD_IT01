@@ -33,7 +33,7 @@
             $database = new medoo();
 
             $checkAuth = $database->has(
-                "surveyUsers", [
+                "surveyusers", [
                 "AND" => [
                 "surveyUserid" => $_GET['surveyuser'],
                 "authkey" => $_GET['authkey']
@@ -46,7 +46,7 @@
             }
 
             $user = $database->get(
-                    "surveyUsers", "*", [
+                    "surveyusers", "*", [
                     "AND" => [
                     "surveyUserid" => $_GET['surveyuser'],
                     "authkey" => $_GET['authkey']

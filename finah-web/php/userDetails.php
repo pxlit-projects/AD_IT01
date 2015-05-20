@@ -9,13 +9,13 @@
                         <span class="skills">
 						<?php
 								$database = new medoo();
-								$user = $database->select(
+								$user = $database->get(
 									"users", "*", [
 									"AND" => [
 									"username" => $_SESSION['username'],
 									"password" => $_SESSION['password']
 									]]);
-								echo '<p>' . $user[0]['firstName'] . " " . $user[0]['lastName'] . ".</p>";
+								echo '<p>' . $user['firstName'] . " " . $user['lastName'] . ".</p>";
 							?>
 						</span>
                     </div>
@@ -30,8 +30,8 @@
         </div>
     </header>
     <?php
-		include 'html/userInfo.html';
-        if($user[0]['rank'] > 9)
+		include 'php/userInfo.php';
+        if($user['rank'] > 9)
         {
             include 'html/admin.html';
         }

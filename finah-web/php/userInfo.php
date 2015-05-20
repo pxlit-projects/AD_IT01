@@ -17,91 +17,59 @@
 				</div>
 				<div class="col-lg-4 profileData">
 					<label for="name">Naam:</label>
-					<p>Ruben Cox</p>
+					<p><?php echo $user['firstName'] . " " . $user['lastName']?></p>
 					<label for="leeftijd">Leeftijd:</label>
-					<p>21</p>
-					<label for="veld">Veld:</label>
-					<p>AON</p>
+					<?php
+						$birthday = new DateTime($user['birthday']);
+						$now = new DateTime();
+						$interval = $now->diff($birthday);
+					?>
+					<p><?php echo $interval->y ?></p>
+					<label for="email">Email:</label>
+					<p><?php echo $user['email'] ?></p>
 				</div>
 			</div>
 		</div>
 		<div class="container" id="WwAanpassen">
 			<div class="row">
 				<form class="form-horizontal" method="post" action="changePassword.php">
-							<div class="row control-group">
-								<div class="form-group col-xs-12 floating-label-form-group controls">
-									<label for="oldPassword" >Huidig wachtwoord</label>
-									<input type="password" class="form-control" placeholder="Huidig wachtwoord" id="oldPassword" name="oldPassword" required data-validation-required-message="Vul hier je huidig wachtwoord in.">
-									<p class="help-block text-danger"></p>
-								</div>
+						<div class="row control-group">
+							<div class="form-group col-xs-12 floating-label-form-group controls">
+								<label for="oldPassword" >Huidig wachtwoord</label>
+								<input type="password" class="form-control" placeholder="Huidig wachtwoord" id="oldPassword" name="oldPassword" required data-validation-required-message="Vul hier je huidig wachtwoord in.">
+								<p class="help-block text-danger"></p>
 							</div>
-							<div class="row control-group">
-								<div class="form-group col-xs-12 floating-label-form-group controls">
-									<label for="newPassword" >Nieuw wachtwoord</label>
-									<input type="password" class="form-control" placeholder="Nieuw wachtwoord" id="newPassword" name="newPassword" required data-validation-required-message="Vul hier je nieuw wachtwoord in.">
-									<p class="help-block text-danger"></p>
-								</div>
+						</div>
+						<div class="row control-group">
+							<div class="form-group col-xs-12 floating-label-form-group controls">
+								<label for="newPassword" >Nieuw wachtwoord</label>
+								<input type="password" class="form-control" placeholder="Nieuw wachtwoord" id="newPassword" name="newPassword" required data-validation-required-message="Vul hier je nieuw wachtwoord in.">
+								<p class="help-block text-danger"></p>
 							</div>
-							<div class="row control-group">
-								<div class="form-group col-xs-12 floating-label-form-group controls">
-									<label for="newPassword2">Nieuw wachtwoord bevestigen</label>
-									<input type="password" class="form-control" placeholder="Nieuw wachtwoord bevestigen" name="newPassword2" id="newPassword2" required data-validation-required-message="Bevestig het nieuwe wachtwoord.">
-									<p class="help-block text-danger"></p>
-								</div>
+						</div>
+						<div class="row control-group">
+							<div class="form-group col-xs-12 floating-label-form-group controls">
+								<label for="newPassword2">Nieuw wachtwoord bevestigen</label>
+								<input type="password" class="form-control" placeholder="Nieuw wachtwoord bevestigen" name="newPassword2" id="newPassword2" required data-validation-required-message="Bevestig het nieuwe wachtwoord.">
+								<p class="help-block text-danger"></p>
 							</div>
-							<div class="row">
-								<div class="col-lg-4 col-lg-offset-4">
-									<button type="submit" class="btn btn-default btn-lg btn-block bigButton">Wachtwoord aanpassen</button>
-								</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-4 col-lg-offset-4">
+								<button type="submit" class="btn btn-default btn-lg btn-block bigButton">Wachtwoord aanpassen</button>
 							</div>
+						</div>
 				</form>
 			</div>
 		</div>
-		<div class="container" id="GgAanpassen">
-			<div class="row">
-				<form class="form-horizontal" method="post" action="changePassword.php">
-							<div class="row control-group">
-								<div class="form-group col-xs-12 floating-label-form-group controls">
-									<label for="naam" >Naam</label>
-									<input type="text" class="form-control" placeholder="Ruben Cox" id="naam" name="naam" required data-validation-required-message="Je moet een naam invullen.">
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-							<div class="row control-group">
-								<div class="form-group col-xs-12 floating-label-form-group controls">
-									<label for="leeftijd" >Leeftijd</label>
-									<input type="text" class="form-control" placeholder="21" id="leeftijd" name="leeftijd" required data-validation-required-message="Je moet je leeftijd invullen.">
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-							<div class="row control-group">
-								<div class="form-group col-xs-12 floating-label-form-group controls">
-									<label for="Veld">Veld</label>
-									<input type="text" class="form-control" placeholder="AON" name="veld" id="veld" required data-validation-required-message="Geef je veld van expertise op.">
-									<p class="help-block text-danger"></p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-4 col-lg-offset-4">
-									<button type="submit" class="btn btn-default btn-lg btn-block bigButton">Gegevens aanpassen</button>
-								</div>
-							</div>
-				</form>
+		<div class="row">
+			<div class="col-lg-6 " id="DProfiel">
+				<a href="#profiel" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Data</button></a>
+			</div>
+            <div class="col-lg-6 " id="WwWijzigen">
+				<a href="#profiel" class="noLink"><button type="button" class="btn btn-default btn-block bigButton" >Wachtwoord Wijzigen</button></a>
 			</div>
 		</div>
-			<div class="row">
-				<div class="col-lg-4 " id="DProfiel">
-					<a href="#profiel" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Data</button></a>
-				</div>
-                <div class="col-lg-4 " id="WwWijzigen">
-					<a href="#profiel" class="noLink"><button type="button" class="btn btn-default btn-block bigButton" >Wachtwoord Wijzigen</button></a>
-				</div>
-				<div class="col-lg-4 " id="GegWijzigen">
-					<a href="#profiel" class="noLink"><button type="button" class="btn btn-default btn-block bigButton" action="#profiel" >Gegevens Wijzigen</button></a>
-				</div>
-
-				
-			</div>
 </section>
 <section class="success" id="patienten">
         <div class="container">
