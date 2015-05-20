@@ -27,10 +27,20 @@
                 <?php
                     session_start();
                     require_once 'medoo.min.php';
+                    $database = new medoo();
                     /* Check if user is previously logged in */
                     if(isset($_SESSION['username'], $_SESSION['password']))
                     {
-                        include 'html/logoutNav.html';
+                        $user = $database->get(
+                                    "users", "*", [
+                                    "AND" => [
+                                    "username" => $_SESSION['username'],
+                                    "password" => $_SESSION['password']
+                                    ]]);
+                        if($user['rank'] > 9)
+                            include 'html/logoutNavAdmin.html';
+                        else
+                            include 'html/logoutNav.html';
                         include 'php/userDetails.php';
                     }
                     /* User is not logged in yet */
@@ -60,7 +70,17 @@
                         {
                             $_SESSION['username'] = $username;
                             $_SESSION['password'] = $password;
-                            include 'html/logoutNav.html';
+
+                            $user = $database->get(
+                                    "users", "*", [
+                                    "AND" => [
+                                    "username" => $username,
+                                    "password" => $password
+                                    ]]);
+                            if($user['rank'] > 9)
+                                include 'html/logoutNavAdmin.html';
+                            else
+                                include 'html/logoutNav.html';
                             include 'html/correctLogin.html';
                             include 'php/userDetails.php';
                         }
