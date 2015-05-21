@@ -95,67 +95,29 @@
                 <div class="col-lg-12 text-center">
                     <p class="successTitle">AANVRAAG</p>
                     <hr class="star-light">
-					<span class="skills">
-						<h1 class="changeL light" id="textA">Lopende</h1>
-					</span>
-					
 				</div>
 			</div>
-			<div class="container" id="ALopende">
+			<div class="container" id="OLopende">
 			<div class="row">
-				<nav class="col-lg-4 col-lg-offset-4">
-				  <ul class="pagination pagination-lg">
-					<li>
-					  <a href="#" aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					  </a>
-					</li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-					  <a href="#" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					  </a>
-					</li>
-				  </ul>
-				</nav>
-			</div>
-		</div>
-		<div class="container" id="AOngeopend">
-			<div class="row">
-				<nav class="col-lg-4 col-lg-offset-4">
-				  <ul class="pagination pagination-lg">
-					<li>
-					  <a href="#" aria-label="Previous">
-						<span aria-hidden="true">&laquo;</span>
-					  </a>
-					</li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-					  <a href="#" aria-label="Next">
-						<span aria-hidden="true">&raquo;</span>
-					  </a>
-					</li>
-				  </ul>
-				</nav>
+				<?php
+					$aanvragen = $database->select("surveyusers", "*", ["AND" => [
+						"user" => $user['userid'],
+						"status" => 1
+						]]);
+
+					foreach ($aanvragen as $aanvraag) {
+						echo '<a id="removestyle" href="enquete.php?surveyuser=' . $aanvraag['surveyUserid'] . '&authkey=' . $aanvraag['authkey'] . '"><p><center>Klik hier om te openen.</center></p></a>';
+					}
+
+				?>
 			</div>
 		</div>
 		<div class="row">				
-            <div class="col-lg-4 col-lg-offset-" id="LAanvraag">
-				<a href="#aanvraag" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Lopende</button></a>
+            <div class="col-lg-4 col-lg-offset-2" id="OAanvraag">
+				<a href="#aanvraag" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Open Aanvragen</button></a>
 			</div>
-			<div class="col-lg-4 col-lg-offset-" id="OAanvraag">
-				<a href="#aanvraag" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Ongeopend</button></a>
-			</div>
-			<div class="col-lg-4 col-lg-offset-" id="NAanvraag">
-				<a href="#aanvraag" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Nieuwe Aanvraag</button></a>
+			<div class="col-lg-4 col-lg-offset-">
+				<a href="php/nieuwaanvraag.php" class="noLink"><button type="button" class="btn btn-default btn-block bigButton">Nieuwe Aanvraag</button></a>
 			</div>
 		</div>
         <div class="row">

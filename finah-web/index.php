@@ -101,6 +101,10 @@
                     else
                     {
                         include 'html/loginNav.html';
+                        if(isset($_GET['regOk']))
+                        {
+                            include 'html/regOk.html';
+                        }
                         include 'html/loginForm.html';
                     }
                 ?>
