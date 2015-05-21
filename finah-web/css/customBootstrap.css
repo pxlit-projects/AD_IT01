@@ -6879,7 +6879,20 @@ input.radio:focus ~ label:before {
 .noLink:hover{
 		text-decoration: none;
 }
+
 #ProfielData,#WwAanpassen,#GgAanpassen,#OverzPat,#NieuwPat,#ANieuw,#ALopende,#AOngeopend{
 	display: none;
 	margin-top: 5%;
+}
+
+#removestyle{
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+
+#alert-danger{
+  margin-top:10%;
+  margin-bottom:5%;
+  text-align:center;
 }
