@@ -35,6 +35,7 @@
         {
             include 'html/admin.html';
         }
+		include 'php/googleTagManager';
 		include 'html/footer.html';
         
     ?>
