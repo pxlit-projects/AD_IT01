@@ -84,6 +84,26 @@
 			</div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
+                	<?php
+                	if($user['rank'] > 9)
+                	{
+                		$aanvragen = $database->select("surveyusers", "*", [
+							"status" => 2
+							]);
+                	}
+                	else
+                	{
+						$aanvragen = $database->select("surveyusers", "*", ["AND" => [
+							"user" => $user['userid'],
+							"status" => 2
+							]]);
+					}
+
+					foreach ($aanvragen as $aanvraag) {
+						echo '<a id="removestyle" href="rapport.php?surveyuser=' . $aanvraag['surveyUserid'] . '"><p><center>Klik hier om te openen.</center></p></a>';
+					}
+
+				?>
 				</div> 
 			</div>
 		</div>
@@ -106,7 +126,7 @@
 						]]);
 
 					foreach ($aanvragen as $aanvraag) {
-						echo '<a id="removestyle" href="enquete.php?surveyuser=' . $aanvraag['surveyUserid'] . '&authkey=' . $aanvraag['authkey'] . '"><p><center>Klik hier om te openen.</center></p></a>';
+						echo '<a href="enquete.php?surveyuser=' . $aanvraag['surveyUserid'] . '&authkey=' . $aanvraag['authkey'] . '"><p><center>Klik hier om te openen.</center></p></a>';
 					}
 
 				?>
