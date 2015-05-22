@@ -56,6 +56,11 @@
             {
             	if(!$database->has("antwoorden", ["AND" => ["vraagid" => $_GET['beantwoord'], "userid" => $_GET['surveyuser']]]))
             	{
+            		$amountofquestions = $database->count("vragen", "*");
+            		if($_GET['beantwoord'] == $amountofquestions)
+            		{
+            			$database->update("surveyusers", ["status" => 2], ["surveyUserid" => $_GET['surveyuser']]);
+            		}
             		if(isset($_GET['radio2']))
             		{
             			$database->insert("antwoorden", ["vraagid" => $_GET['beantwoord'], "userid" => $_GET['surveyuser'], "antwoord" => $_GET['radio'], "werk" => $_GET['radio2']]);
