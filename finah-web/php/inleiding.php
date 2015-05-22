@@ -20,6 +20,9 @@
                 	echo '<input type="text" class="form-control" id="vraagid" name="authkey" value="' . $_GET['authkey'] . '">';
                 	echo '<input type="text" class="form-control" id="vraagid" name="vraagid" value="1">';
                 ?>
+                <div class="progress">
+				  <div class="progress-bar progress-bar-info" style="width: 0%"></div>
+				</div>
                     <div class="col-lg-2 col-md-offset-8">
                         <button type="submit" class="btn btn-default btn-lg btn-block">Volgende</button>
                     </div>
@@ -27,6 +30,10 @@
             </fieldset>
         </form>
     </div>
+    <?php 
+    	$amountofquestions = $database->count("vragen", "*"); 
+    ?>
+    
 </div>
 	
 		

@@ -13,7 +13,7 @@
             <div class="row">
 				
                 <div class="col-lg-4 col-lg-offset-3">
-					<img src="Images/logo/logo.png" alt="FINAH-NAH" class="profileLogo">
+					<img src="images/logo/logo.png" alt="FINAH-NAH" class="profileLogo">
 				</div>
 				<div class="col-lg-4 profileData">
 					<label for="name">Naam:</label>

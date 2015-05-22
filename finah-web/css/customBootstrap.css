@@ -6806,7 +6806,7 @@ legend {
 
 /* hide input */
 input.radio:empty {
-  margin-left: -999px;
+  margin-left: -2000px;
 }
 
 /* style label */
@@ -6892,7 +6892,7 @@ input.radio:focus ~ label:before {
 
 
 #alert-danger{
-  margin-top:10%;
+  margin-top:15%;
   margin-bottom:5%;
   text-align:center;
 }

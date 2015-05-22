@@ -24,12 +24,26 @@ function showFeedbackDiv() {
     var feedback = document.getElementById("feedback");
     if(feedback.style.visibility != 'visible')
         $('#feedback').css('visibility','visible').hide().fadeIn(1500);    
+
+    var nextButton = document.getElementById("nextButton");
+    if(nextButton.style.visibility == 'visible')
+        $('#nextButton').css('visibility','hidden').hide().fadeIn(1500);
 }
 
 function showNextButton() {
     var nextButton = document.getElementById("nextButton");
     if(nextButton.style.visibility != 'visible')
         $('#nextButton').css('visibility','visible').hide().fadeIn(1500);    
+}
+
+function showNextButtonWithoutFeedback(){
+    var feedback = document.getElementById("feedback");
+    if(feedback.style.visibility == 'visible')
+        $('#feedback').css('visibility','hidden').hide().fadeIn(1500);
+
+    var nextButton = document.getElementById("nextButton");
+    if(nextButton.style.visibility != 'visible')
+        $('#nextButton').css('visibility','visible').hide().fadeIn(1500);
 }
 
 function hideVideoIntroDiv() {

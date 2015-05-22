@@ -42,7 +42,7 @@
                         else
                             include 'html/logoutNav.html';
                         
-						include 'php/googleTagManager';
+						include 'php/googleTagManager.php';
 
                         if(isset($_GET['updatePass']))
                         {
@@ -79,7 +79,7 @@
                             include 'html/loginNav.html';
                             include 'html/failedLogin.html';
                             include 'html/loginForm.html';
-							include 'php/googleTagManager';
+							include 'php/googleTagManager.php';
                         }
                         else
                         {

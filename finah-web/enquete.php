@@ -137,12 +137,12 @@
                             <form>
                                 <div class="col-md-6">
                                     <div id="labelDiv">
-                                        <input type="radio" name="radio" id="radio1" class="radio" value="1" onclick="showFeedbackDiv()"/>
+                                        <input type="radio" name="radio" id="radio1" class="radio" value="1" onclick="showNextButtonWithoutFeedback()"/>
                                         <label id="radioLabel" for="radio1">Verloopt naar wens</label>
                                     </div>
 
                                     <div id="labelDiv">
-                                        <input type="radio" name="radio" id="radio2" class="radio" value="2" onclick="showFeedbackDiv()"/>
+                                        <input type="radio" name="radio" id="radio2" class="radio" value="2" onclick="showNextButtonWithoutFeedback()"/>
                                         <label id="radioLabel" for="radio2">Probleem - niet hinderlijk</label>
                                     </div>
 
@@ -173,6 +173,11 @@
                                         <input type="radio" name="radio2" id="radio7" class="radio" value="0" onclick="showNextButton()" />
                                         <label id="radioLabel" for="radio7">Neen</label>
                                     </div>
+                                </div>
+                                <div class="col-lg-12" style="margin-top: 40px;">
+                                	<div class="progress">
+									  <?php echo '<div class="progress-bar progress-bar-info" style="width:' . ($_GET['vraagid'] * 100 / $amountofquestions) . '%"></div>'; ?>
+									</div>
                                 </div>
                                 <div class="col-lg-2 col-md-offset-8" id="nextButton">
                                     <button type="button" class="btn btn-default btn-lg btn-block">Volgende</button>
