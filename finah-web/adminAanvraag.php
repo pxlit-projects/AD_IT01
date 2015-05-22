@@ -64,11 +64,43 @@
                         <?php
                         
                             $openaanvragen = $database->select("surveyusers", "*", ["status" => 0]);
+                            ?>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Naam</th>
+                                    <th>Functie</th>
+                                    <th>Email</th>
+                                    <th>Actie</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $counter = 1;
                             foreach ($openaanvragen as $openaanvraag) {
                                 $user = $database->get("users", "*", ["userid" => $openaanvraag['user']]);
 
+                                echo '<tr>';
+                                    echo '<th>' . $counter . '</th>';
+                                    echo '<th>' . $user['firstName'] . ' ' . $user['lastName'] . '</th>';
+                                    if($user['rank'] == 1)
+                                        echo '<th>Patiënt</th>';
+                                    else if($user['rank'] == 2)
+                                        echo '<th>Mantelzorger</th>';
+                                    else if($user['rank'] == 10)
+                                        echo '<th>Admin</th>';
+                                    else
+                                        echo '<th>Unknown</th>';
+                                    echo '<th>' . $user['email'] . '</th>';
+                                    echo '<th><a href="editAanvraag.php?surveyid=' . $openaanvraag['surveyUserid'] . '">Beheren</a></th>';
+                                echo '</tr>';
+
+                                $counter++;
                             }
                         ?>
+                            </tbody>
+                        </table>
                     </div> 
                 </div>
             </div>

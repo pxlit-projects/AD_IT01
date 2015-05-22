@@ -39,10 +39,10 @@
                                     ]]);
                         if($user['rank'] > 9)
                             include 'html/logoutNavAdmin.html';
-							include 'php/googleTagManager';
                         else
                             include 'html/logoutNav.html';
-							include 'php/googleTagManager';
+                        
+						include 'php/googleTagManager';
 
                         if(isset($_GET['updatePass']))
                         {
