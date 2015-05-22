@@ -71,14 +71,14 @@
 			</div>
 		</div>
 </section>
-<section class="" id="rapporten">
+<section class="success" id="rapporten">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p class="title">RAPPORTEN</p>
-                    <hr class="star-primary">
+                    <p class="successTitle">RAPPORTEN</p>
+                    <hr class="star-light">
 					<span class="skills">
-						<h1>Overzicht</h1>
+						<h1 class="light">Overzicht</h1>
 					</span>
 				</div>
 			</div>
@@ -88,13 +88,13 @@
 			</div>
 		</div>
 </section>
-<section class="success" id="aanvraag">
+<section class="" id="aanvraag">
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-12 text-center">
-                    <p class="successTitle">AANVRAAG</p>
-                    <hr class="star-light">
+                    <p class="title">AANVRAAG</p>
+                    <hr class="star-primary">
 				</div>
 			</div>
 			<div class="container" id="OLopende">
